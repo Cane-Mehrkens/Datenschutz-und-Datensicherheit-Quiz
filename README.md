@@ -28,5 +28,12 @@ Der Fortschritt wird lokal im Browser gespeichert. Das bedeutet:
 
 Für Cloud-Speicherung bräuchte man zusätzlich einen Server mit Datenbank/Login.
 
-Update: Die Antwortreihenfolge wird bei jedem neu gestarteten Kapitel zufällig gemischt. Wenn möglich steht die richtige Antwort nicht an erster Stelle.
+Update v4:
+- Viele neue Fragen und Lernkarten ergänzt.
+- Neue Kapitel: DSGVO & BDSG Grundlagen, Sicherheitsmanagement / ISMS, Risikoanalyse, Umsetzungsplanung, Aufrechterhaltung & Verbesserung.
+- Neue Lernkarten u. a. zu Rainbow Tables, Brute Force, Wörterbuchangriff, Immutable Backup, Air Gap, Parität, Rebuild, Degraded Mode.
+- Abschlusskapitelprüfung mit schweren Mischfragen: wird erst freigeschaltet, wenn alle anderen Kapitel einmal beendet wurden.
+- Antwortmöglichkeiten bleiben zufällig gemischt.
+- Nach dem Bestätigen ist die Antwort gesperrt und kann nicht mehr verändert werden.
+- Extra Button "Antwort prüfen" wurde entfernt: "Antwort bestätigen" prüft direkt und danach geht derselbe Button weiter.
 
