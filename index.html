@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LF4 Datenschutz & Datensicherheit – Quiz und Lernmodus</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <button id="homeBtn" class="ghost small" title="Zur Startseite">🏠 Start</button>
+    <div class="brand">
+      <span class="logo">LF4</span>
+      <div>
+        <h1>Datenschutz & Datensicherheit</h1>
+        <p>Quiz + Lernmodus für Klassenarbeit</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button id="darkToggle" class="ghost small" aria-label="Dark Mode umschalten">🌙 Dark</button>
+      <button id="resetStorageBtn" class="danger small" title="Speicherstand löschen">Speicher löschen</button>
+    </div>
+  </header>
+
+  <main id="app" class="app"></main>
+
+  <template id="homeTemplate">
+    <section class="hero card">
+      <div>
+        <p class="eyebrow">Lernfeld 4 · Schutzbedarfsanalyse</p>
+        <h2>Wähle ein Kapitel und lerne gezielt.</h2>
+        <p>Jedes Kapitel hat eigene Fragen. Im Lernmodus kannst du nach Begriffen suchen und die Lernkarten nach Kapitel filtern.</p>
+      </div>
+      <div class="hero-buttons">
+        <button id="openLearnBtn" class="primary">📚 Lernmodus öffnen</button>
+        <button id="resumeBtn" class="secondary hidden">▶️ Speicherstand fortsetzen</button>
+      </div>
+    </section>
+
+    <section class="stats-grid" id="statsGrid"></section>
+    <section class="chapter-grid" id="chapterGrid"></section>
+  </template>
+
+  <footer class="footer">
+    <span>Speicherung: lokal im Browser über LocalStorage. Kein Login, kein Server nötig.</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
