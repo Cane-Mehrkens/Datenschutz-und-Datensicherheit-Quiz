@@ -1,4 +1,4 @@
-/* LF4 Quiz + Lernmodus – reine Offline-Webseite, Speicherung mit localStorage */
+/* LF4 Quiz + Lernmodus – reine Offline-Webseite, Speicherung mit Cookies direkt im Browser */
 const APP_VERSION = "lf4-quiz-v3-random-answers";
 const STORAGE_KEY = "lf4_quiz_lernmodus_save_v2";
 
