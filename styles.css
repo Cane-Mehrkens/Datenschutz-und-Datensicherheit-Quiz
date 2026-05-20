@@ -48,6 +48,7 @@ button:disabled{opacity:.45;cursor:not-allowed;transform:none}
   backdrop-filter: blur(14px);
   border-bottom:1px solid var(--border);
 }
+
 .answer.locked {
   cursor: not-allowed;
   opacity: 0.9;
@@ -56,6 +57,7 @@ button:disabled{opacity:.45;cursor:not-allowed;transform:none}
 .answer.locked input {
   cursor: not-allowed;
 }
+
 .brand{display:flex;align-items:center;gap:.9rem;min-width:0}
 .logo{display:inline-grid;place-items:center;width:48px;height:48px;border-radius:16px;background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;font-weight:900;box-shadow:var(--shadow)}
 h1{font-size:clamp(1.1rem,2vw,1.45rem);margin:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
