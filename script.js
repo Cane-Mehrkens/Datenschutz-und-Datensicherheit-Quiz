@@ -389,9 +389,8 @@ function renderQuiz(){
           <button class="ghost" id="hintBtn">💡 Tipp</button>
         </div>
         <div class="right">
-          <button class="secondary" id="checkBtn">Antwort prüfen</button>
-          <button class="primary" id="nextBtn">${idx===qs.length-1 ? "Ergebnis anzeigen" : "Weiter →"}</button>
-        </div>
+          <button class="primary" id="nextBtn">${ans.checked ? (idx===qs.length-1 ? "Ergebnis anzeigen" : "Weiter →") : "Antwort bestätigen"}</button>
+</div>
       </div>
     </section>`;
 
@@ -413,7 +412,6 @@ function renderQuiz(){
     });
     document.getElementById("feedbackArea").innerHTML = "";
   }));
-  document.getElementById("checkBtn").addEventListener("click", () => checkCurrentAnswer(q));
   document.getElementById("nextBtn").addEventListener("click", () => nextQuestion(qs));
 }
 
@@ -436,7 +434,12 @@ function checkCurrentAnswer(q){
 function nextQuestion(qs){
   const q = qs[state.quiz.current];
   const a = ensureAnswer(q.id);
-  if(!a.checked){ alert("Bitte prüfe die Antwort zuerst, damit du direkt siehst, ob sie richtig oder falsch war."); return; }
+
+  if(!a.checked){
+    checkCurrentAnswer(q);
+    return;
+  }
+
   if(state.quiz.current >= qs.length-1){
     state.quiz.finished = true;
     persist();
