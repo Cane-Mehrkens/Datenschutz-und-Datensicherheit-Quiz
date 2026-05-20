@@ -374,19 +374,19 @@ function renderQuiz(){
       <div class="progress-wrap"><div class="progress-bar" style="width:${progress}%"></div></div>
       ${q.scenario ? `<div class="scenario"><strong>Situation:</strong> ${escapeHtml(q.scenario)}</div>` : ""}
       <h2 class="question-title">${escapeHtml(q.text)}</h2>
-      <div class="answer-list">
-        ${optionOrder.map(originalIndex=>`
-          <label class="answer ${ans.selected.includes(originalIndex) ? "selected" : ""} ${ans.checked ? "locked" : ""}">
-  <input 
-    type="${q.type === "multi" ? "checkbox" : "radio"}" 
-    name="answer" 
-    value="${originalIndex}" 
-    ${ans.selected.includes(originalIndex) ? "checked" : ""}
-    ${ans.checked ? "disabled" : ""}
-  >
-  <span>${escapeHtml(q.options[originalIndex])}</span>
-</label>
-      </div>
+     <div class="answer-list">
+  ${optionOrder.map(originalIndex=>`
+    <label class="answer ${ans.selected.includes(originalIndex) ? "selected" : ""} ${ans.checked ? "locked" : ""}">
+      <input 
+        type="${q.type === "multi" ? "checkbox" : "radio"}" 
+        name="answer" 
+        value="${originalIndex}" 
+        ${ans.selected.includes(originalIndex) ? "checked" : ""}
+        ${ans.checked ? "disabled" : ""}
+      >
+      <span>${escapeHtml(q.options[originalIndex])}</span>
+    </label>`).join("")}
+</div>
       <div id="hintArea">${ans.hint ? `<div class="hint-box"><strong>Tipp:</strong> ${escapeHtml(q.hint)}</div>` : ""}</div>
       <div id="feedbackArea">${ans.checked ? feedbackHtml(ans.correct) : ""}</div>
       <div class="quiz-actions">
